@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
+    <title>Catatan Tugas </title>
+    <!-- Footable CSS -->
+    <link href="./assets/node_modules/footable/css/footable.core.css" rel="stylesheet">
+    <link href="./assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="./assets/dist/css/style.min.css" rel="stylesheet">
+    <!-- page css -->
+    <link href="./assets/dist/css/pages/footable-page.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fixed-layout skin-green-dark mini-sidebar">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Elite admin</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+
+                        <li> <a class=" waves-effect waves-dark" href="#" aria-expanded="false"><i class="ti-layout-accordion-merged"></i><span class="">Catatan Tugas </span></a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self">
+                        <h4 class="text-themecolor">Catatan Tugas </h4>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                              <h4 class="card-title">Catatan Tugas</h4>
+                              <h6 class="card-subtitle"></h6>
+                              <div class="table-responsive">
+                                  <table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list" data-page-size="10">
+                                      <thead>
+                                          <tr>
+                                              <th>Id Tugas</th>
+                                              <th>Mata KUliah</th>
+                                              <th>Tugas</th>
+                                              <th style="text-align: right;">Aksi</th>
+
+                                          </tr>
+                                      </thead>
+                                      <tbody id="show_data">
+
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <td colspan="2">
+                                                  <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#ModalAdd">Tambah Tugas</button>
+                                              </td>
+                                              <div class="modal fade in" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                              <h4 class="modal-title" id="myModalLabel">Tambah Tugas</h4>
+                                                          </div>
+                                                          <form class="form-horizontal">
+                                                              <div class="modal-body">
+                                                                  <div class="form-group">
+                                                                      <label class="control-label col-xs-3" >Id Tugas</label>
+                                                                      <div class="col-xs-9">
+                                                                          <input name="kobar" id="id_tugas" class="form-control" type="text" placeholder="Id Tugas" style="width:335px;" required>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label class="control-label col-xs-3" >Mata Kuliah</label>
+                                                                      <div class="col-xs-9">
+                                                                          <input name="nabar" id="mata_kuliah" class="form-control" type="text" placeholder="Mata Kuliah" style="width:335px;" required>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label class="control-label col-xs-3" >Tugas</label>
+                                                                      <div class="col-xs-9">
+                                                                          <input name="harga" id="tugas" class="form-control" type="text" placeholder="tugas" style="width:335px;" required>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </form>
+                                                          <div class="modal-footer">
+                                                              <button type="button" class="btn btn-info waves-effect" data-dismiss="modal" id="btn_simpan">Simpan</button>
+                                                              <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
+                                                          </div>
+                                                      </div>
+                                                      <!-- /.modal-content -->
+                                                  </div>
+                                                  <!-- /.modal-dialog -->
+                                              </div>
+
+                                              <!--modal edit-->
+                                              <div class="modal fade in" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                              <h4 class="modal-title" id="myModalLabel">Tambah TUgas</h4>
+                                                          </div>
+                                                          <form class="form-horizontal">
+                                                              <div class="modal-body">
+                                                                  <div class="form-group">
+                                                                      <label class="control-label col-xs-3" >Id Tugas</label>
+                                                                      <div class="col-xs-9">
+                                                                          <input name="kobar_edit" id="id_yugas" class="form-control" type="text" placeholder="Id Tugas" style="width:335px;" required>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label class="control-label col-xs-3" >Mata Kuliah</label>
+                                                                      <div class="col-xs-9">
+                                                                          <input name="nabar_edit" id="mata_kuliah" class="form-control" type="text" placeholder="Mata Kuliah" style="width:335px;" required>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label class="control-label col-xs-3" >Tugas</label>
+                                                                      <div class="col-xs-9">
+                                                                          <input name="harga_edit" id="tugas" class="form-control" type="text" placeholder="Tugas" style="width:335px;" required>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </form>
+                                                          <div class="modal-footer">
+                                                              <button type="button" class="btn btn-info waves-effect" id="btn_update">Update</button>
+                                                              <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
+                                                          </div>
+                                                      </div>
+                                                      <!-- /.modal-content -->
+                                                  </div>
+                                                  <!-- /.modal-dialog -->
+                                              </div>
+                                              <!--modal edit-->
+
+                                              <!--modal-hapus-->
+                                              <div class="modal fade in" id="ModalHapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                              <h4 class="modal-title" id="myModalLabel">Tambah Tugas</h4>
+                                                          </div>
+                                                          <form class="form-horizontal">
+                                                              <div class="modal-body">
+                                                                  <input type="hidden" name="kode" id="textkode" value="">
+                                                                  <div class="alert alert-warning"><p>Apakah Anda yakin menghapus tugas ini?</p></div>
+                                                              </div>
+                                                          </form>
+                                                          <div class="modal-footer">
+                                                              <button type="button" class="btn btn-info waves-effect" data-dismiss="modal" id="btn_hapus">Hapus</button>
+                                                              <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
+                                                          </div>
+                                                      </div>
+                                                      <!-- /.modal-content -->
+                                                  </div>
+                                                  <!-- /.modal-dialog -->
+                                              </div>
+                                              <!--modal hapus-->
+                                              <td colspan="7">
+                                                  <div class="text-right">
+                                                      <ul class="pagination"> </ul>
+                                                  </div>
+                                              </td>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                        <!-- Column -->
+
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="./assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="./assets/node_modules/popper/popper.min.js"></script>
+    <script src="./assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="./assets/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="./assets/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="./assets/dist/js/sidebarmenu.js?>"></script>
+    <!--Custom JavaScript -->
+    <script src="./assets/dist/js/custom.min.js"></script>
+    <!-- Footable -->
+    <script src="./assets/node_modules/footable/js/footable.all.min.js"></script>
+    <!--FooTable init-->
+    <script src="./assets/dist/js/pages/footable-init.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+
+</body>
+
+</html>
